@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><span>Best</span><i>App</i></a>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="quiz.html"><i id="special">quiz</i></a>
+            <a href="bantuan.html">bantuan</a>
+        </nav>
+    </header>
+    <section id="menu">
+        <div class="button-menu" onclick="renderQuiz()">Mainkan Quiz</div>
+        <div class="button-menu" onclick="renderDaftar()">Daftar Pertanyaan</div>
+    </section>
+    <section id="quiz">
+        <div>Quiz</div>
+    </section>
+    <section id="daftar">
+        <div>
+            <h1>Daftar Pertanyaan</h1>
+            <form id="dropdown">
+                <select id="selectCategory" onchange="renderDaftar()">
+                    <option selected>Pilih Kategori</option>
+                    <option value="penyanyi">Penyanyi</option>
+                    <option value="hewan">Hewan</option>
+                    <option value="buah">Buah</option>
+                </select>
+            </form>
+            <ul class="list-question">
+
+            </ul>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
