@@ -24,8 +24,6 @@ let listPertanyaan = {
                 { value: "salah", text: "jwb4" },
             ]
         }
-
-
     ],
     hewan: [
         {
