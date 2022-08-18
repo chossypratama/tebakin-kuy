@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tes.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="opening">
+        <h1>Ayo jawab pertanyaannya!</h1>
+        <button id="mulai">Mulai</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+        <h1 id="question"></h1>
+        <input type="radio" name="pilihan" data-id="0" id="op0">
+        <label for="op0" id="opText0"></label>
+
+        <input type="radio" name="pilihan" data-id="1" id="op1">
+        <label for="op1" id="opText1"></label>
+
+        <input type="radio" name="pilihan" data-id="2" id="op2">
+        <label for="op2" id="opText2"></label>
+
+        <input type="radio" name="pilihan" data-id="3" id="op3">
+        <label for="op3" id="opText3"></label>
+
+        <button id="button">Next</button>
+    </div>
+    <div id="closing" class="hidden">
+        <h1>Selesai!</h1>
+        <h2 id="score"></h2>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
