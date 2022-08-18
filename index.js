@@ -1,103 +1,99 @@
-let listPertanyaan = {
-    penyanyi: [
-        {
-            pertanyaan: 'Penyanyi apa yang suka naik sepeda ?',
-            jawaban: [
-                { value: true, text: "Selena Gowes" },
-                { value: false, text: "Ari Basso" },
-                { value: false, text: "Iwan Fales" },
-                { value: false, text: "Ariel YesAh" },
-            ]
-        },
-        {
-            pertanyaan: 'Penyanyi luar negeri yang susah menelen ?',
-            jawaban: [
-                { value: false, text: "Rihaha" },
-                { value: true, text: "Ed Shered" },
-                { value: false, text: "Demi Lovani" },
-                { value: false, text: "Adelele" },
-            ]
-        },
-        {
-            pertanyaan: 'Penyanyi yang suka nyerah ?',
-            jawaban: [
-                { value: false, text: "Ariel YesAh" },
-                { value: false, text: "Eminem" },
-                { value: true, text: "Pasrah Ungu" },
-                { value: false, text: "Agnes Monikah" },
-            ]
-        }
-    ],
-    hewan: [
-        {
-            pertanyaan: 'Hewan apa yang ga pernah salah ?', jawaban: [
-                { value: true, text: "Kucing ga wrong" },
-                { value: false, text: "Anjing" },
-                { value: false, text: "Ayam Jantan" },
-                { value: false, text: "Itik" },
-            ]
-        },
-        {
-            pertanyaan: 'Hewan apakah yang ga pernah berisik ?',
-            jawaban: [
-                { value: false, text: "G ajah" },
-                { value: true, text: "Semute" },
-                { value: false, text: "Ulaaar" },
-                { value: false, text: "Lalat" },
-            ]
-        },
-        {
-            pertanyaan: 'Hewan apa yang gak sopan ?',
-            jawaban: [
-                { value: false, text: "Lebah" },
-                { value: false, text: "Kucing Garong" },
-                { value: true, text: "Kutu" },
-                { value: false, text: "Anjing" },
-            ]
-        }
-    ],
-    buah: [
-        {
-            pertanyaan: 'Buah apa yang bisa buat nyimpen barang ?',
-            jawaban: [
-                { value: true, text: "Leci" },
-                { value: false, text: "Apel" },
-                { value: false, text: "Anggur" },
-                { value: false, text: "Melon" },
-            ]
-        },
-        {
-            pertanyaan: 'Buah yang kalo di patahin bikin sakit ?',
-            jawaban: [
-                { value: false, text: "Duren" },
-                { value: true, text: "Kelengkeng" },
-                { value: false, text: "Semangka" },
-                { value: false, text: "Jeruk" },
-            ]
-        },
-        {
-            pertanyaan: 'Buah apa yang suka gombal',
-            jawaban: [
-                { value: false, text: "Pisang" },
-                { value: false, text: "Nanas" },
-                { value: true, text: "Buahya" },
-                { value: false, text: "Apel" },
-            ]
-        }
-    ]
-}
-
+let listPertanyaan = [
+    {
+        pertanyaan: 'Penyanyi apa yang suka naik sepeda ?',
+        jawaban: [
+            { value: true, text: "Selena Gowes" },
+            { value: false, text: "Ari Basso" },
+            { value: false, text: "Iwan Fales" },
+            { value: false, text: "Ariel YesAh" },
+        ]
+    }, {
+        pertanyaan: 'Penyanyi luar negeri yang susah menelen ?',
+        jawaban: [
+            { value: false, text: "Rihaha" },
+            { value: true, text: "Ed Shered" },
+            { value: false, text: "Demi Lovani" },
+            { value: false, text: "Adelele" },
+        ]
+    }, {
+        pertanyaan: 'Buah apa yang suka gombal',
+        jawaban: [
+            { value: false, text: "Pisang" },
+            { value: false, text: "Nanas" },
+            { value: true, text: "Buahya" },
+            { value: false, text: "Apel" },
+        ]
+    }, {
+        pertanyaan: 'Buah yang kalo di patahin bikin sakit ?',
+        jawaban: [
+            { value: false, text: "Duren" },
+            { value: true, text: "Kelengkeng" },
+            { value: false, text: "Semangka" },
+            { value: false, text: "Jeruk" },
+        ]
+    }, {
+        pertanyaan: 'Buah apa yang bisa buat nyimpen barang ?',
+        jawaban: [
+            { value: true, text: "Leci" },
+            { value: false, text: "Apel" },
+            { value: false, text: "Anggur" },
+            { value: false, text: "Melon" },
+        ]
+    }, {
+        pertanyaan: 'Hewan apa yang ga pernah salah ?', jawaban: [
+            { value: true, text: "Kucing ga wrong" },
+            { value: false, text: "Anjing" },
+            { value: false, text: "Ayam Jantan" },
+            { value: false, text: "Itik" },
+        ]
+    }, {
+        pertanyaan: 'Hewan apakah yang ga pernah berisik ?',
+        jawaban: [
+            { value: false, text: "G ajah" },
+            { value: true, text: "Semute" },
+            { value: false, text: "Ulaaar" },
+            { value: false, text: "Lalat" },
+        ]
+    }, {
+        pertanyaan: 'Hewan apa yang gak sopan ?',
+        jawaban: [
+            { value: false, text: "Lebah" },
+            { value: false, text: "Kucing Garong" },
+            { value: true, text: "Kutu" },
+            { value: false, text: "Anjing" },
+        ]
+    }, {
+        pertanyaan: 'Penyanyi yang suka nyerah ?',
+        jawaban: [
+            { value: false, text: "Ariel YesAh" },
+            { value: false, text: "Eminem" },
+            { value: true, text: "Pasrah Ungu" },
+            { value: false, text: "Agnes Monikah" },
+        ]
+    }
+]
 
 
 // let penyanyi diklik buka pertanyaan - pertanyaan dari listPertanyaan.penyanyi.pertanyaan
 let uSoal = -1
-let point = 0
 let score = 0
 let mulai = true
+let next = document.getElementById("next")
+let point = 0
+let userAnswer = ''
+
 
 function start(kategori) {
     // let question = document.getElementById("question")
     // for (let i = 0; i < listPertanyaan[kategori].length; i++) {
+    if (uSoal === -1) {
+        next.innerHTML = "Start"
+    }
+    if (uSoal > 0 && uSoal < 2) {
+        next.innerHTML = "Start"
+    }
+
+
     uSoal++
     const ktg = listPertanyaan[kategori][uSoal];
     // question.innerHTML = kategori.pertanyaan
@@ -124,72 +120,70 @@ function start(kategori) {
     op3.value = ktg.jawaban[2].value
     op4.value = ktg.jawaban[3].value
 
-    let userAnswer = ''
+
     // ketika dipilih 
     op1.addEventListener("click", () => {
         op1.style.backgroundColor = "lightgreen";
         op2.style.backgroundColor = "lightblue";
         op3.style.backgroundColor = "lightblue";
         op4.style.backgroundColor = "lightblue";
-        userAnswer = op1.value
+        userAnswer = ktg.jawaban[0].value
     })
     op2.addEventListener("click", () => {
         op1.style.backgroundColor = "lightblue";
         op2.style.backgroundColor = "lightgreen";
         op3.style.backgroundColor = "lightblue";
         op4.style.backgroundColor = "lightblue";
-        userAnswer = op2.value
+        userAnswer = ktg.jawaban[1].value
     })
     op3.addEventListener("click", () => {
         op1.style.backgroundColor = "lightblue";
         op2.style.backgroundColor = "lightblue";
         op3.style.backgroundColor = "lightgreen";
         op4.style.backgroundColor = "lightblue";
-        userAnswer = op3.value
+        userAnswer = ktg.jawaban[2].value
     })
     op4.addEventListener("click", () => {
         op1.style.backgroundColor = "lightblue";
         op2.style.backgroundColor = "lightblue";
         op3.style.backgroundColor = "lightblue";
         op4.style.backgroundColor = "lightgreen";
-        userAnswer = op4.value
+        userAnswer = ktg.jawaban[3].value
     })
-
-    if (userAnswer) {
+    if (userAnswer === true) {
         point++
     }
-
-    score = point / ktg.length * 100
-    if (uSoal === 'selesai') {
+    if (uSoal === 1) {
         mulai = false
-        console.log(mulai);
     }
+
+    console.log(point);
+    score = point / ktg.length * 100
 }
 
+
+if (mulai) {
+    next.innerHTML = "Next"
+    next.addEventListener("click", () => {
+        start('hewan')
+    })
+}
+if (!mulai) {
+    next.innerHTML = "Selesai"
+    next.addEventListener("click", () => {
+        // tampilin score
+        alert(score)
+    })
+}
 
 // next.addEventListener("click", () => {
 //     start(kategori)
 //     uSoal++
 // })
-if (!mulai) {
-    next.innerHTML = "Selesai"
-    next.addEventListener("click", () => {
-        // tampilin score
-        alert("tes")
-    })
-}
-let next = document.getElementById("next")
 
-if (uSoal === -1) {
-    next.innerHTML = "Start"
-}
 
-if (mulai) {
-    next.innerHTML = "Next"
-    next.addEventListener("click", () => {
-        start('penyanyi')
-    })
-}
+
+
 
 
 // let penyanyi = document.getElementById('penyanyi')
