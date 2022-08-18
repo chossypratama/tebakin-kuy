@@ -80,6 +80,8 @@ li {
     list-style: none;
 }
 
+/* Daftar Pertanyaan */
+
 .list-question-text {
     display: flex;
 }
@@ -88,6 +90,7 @@ li {
     flex: 1 1 auto;
 }
 
+.tambah-btn,
 .update-btn,
 .delete-btn {
   color: white;
@@ -104,4 +107,13 @@ li {
 
 .delete-btn {
   background: #dc3246;
+}
+
+/* Tambah/Update Pertanyaan */
+
+#tambah {
+    left: 0;
+    right: 0;
+    width: 50vw;
+    margin: 30px auto;
 }
