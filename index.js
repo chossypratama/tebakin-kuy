@@ -1,204 +1,147 @@
 let listPertanyaan = [
     {
         pertanyaan: 'Penyanyi apa yang suka naik sepeda ?',
-        jawaban: [
-            { value: true, text: "Selena Gowes" },
-            { value: false, text: "Ari Basso" },
-            { value: false, text: "Iwan Fales" },
-            { value: false, text: "Ariel YesAh" },
-        ]
+        jawaban: ["Selena Gowes", "Ari Basso", "Iwan Fales", "Ariel YesAh"],
+        kunJaw: 0
     }, {
         pertanyaan: 'Penyanyi luar negeri yang susah menelen ?',
-        jawaban: [
-            { value: false, text: "Rihaha" },
-            { value: true, text: "Ed Shered" },
-            { value: false, text: "Demi Lovani" },
-            { value: false, text: "Adelele" },
-        ]
+        jawaban: ["Rihaha", "Ed Shered", "Demi Lovani", "Adelele"],
+        kunJaw: 1
     }, {
         pertanyaan: 'Buah apa yang suka gombal',
-        jawaban: [
-            { value: false, text: "Pisang" },
-            { value: false, text: "Nanas" },
-            { value: true, text: "Buahya" },
-            { value: false, text: "Apel" },
-        ]
+        jawaban: ["Pisang", "Nanas", "Buahya", "Apel"],
+        kunJaw: 2
     }, {
         pertanyaan: 'Buah yang kalo di patahin bikin sakit ?',
-        jawaban: [
-            { value: false, text: "Duren" },
-            { value: true, text: "Kelengkeng" },
-            { value: false, text: "Semangka" },
-            { value: false, text: "Jeruk" },
-        ]
+        jawaban: ["Duren", "Kelengkeng", "Semangka", "Jeruk"],
+        kunJaw: 1
     }, {
         pertanyaan: 'Buah apa yang bisa buat nyimpen barang ?',
-        jawaban: [
-            { value: true, text: "Leci" },
-            { value: false, text: "Apel" },
-            { value: false, text: "Anggur" },
-            { value: false, text: "Melon" },
-        ]
+        jawaban: ["Melon", "Apel", "Anggur", "Leci"],
+        kunJaw: 3
     }, {
-        pertanyaan: 'Hewan apa yang ga pernah salah ?', jawaban: [
-            { value: true, text: "Kucing ga wrong" },
-            { value: false, text: "Anjing" },
-            { value: false, text: "Ayam Jantan" },
-            { value: false, text: "Itik" },
-        ]
+        pertanyaan: 'Hewan apa yang ga pernah salah ?',
+        jawaban: ["Kucing ga wrong", "Anjing", "Ayam Jantan", "Itik",
+        ],
+        kunJaw: 0
     }, {
         pertanyaan: 'Hewan apakah yang ga pernah berisik ?',
-        jawaban: [
-            { value: false, text: "G ajah" },
-            { value: true, text: "Semute" },
-            { value: false, text: "Ulaaar" },
-            { value: false, text: "Lalat" },
-        ]
+        jawaban: ["G ajah", "Semute", "Ulaaar", "Lalat"],
+        kunJaw: 1
     }, {
         pertanyaan: 'Hewan apa yang gak sopan ?',
-        jawaban: [
-            { value: false, text: "Lebah" },
-            { value: false, text: "Kucing Garong" },
-            { value: true, text: "Kutu" },
-            { value: false, text: "Anjing" },
-        ]
+        jawaban: ["Lebah", "Kucing Garong", "Kutu", "Anjing"],
+        kunJaw: 2
     }, {
         pertanyaan: 'Penyanyi yang suka nyerah ?',
-        jawaban: [
-            { value: false, text: "Ariel YesAh" },
-            { value: false, text: "Eminem" },
-            { value: true, text: "Pasrah Ungu" },
-            { value: false, text: "Agnes Monikah" },
-        ]
+        jawaban: ["Ariel YesAh", "Eminem", "Agnes Monikah", "Pasrah Ungu"],
+        kunJaw: 3
     }
 ]
 
+let kunciJawaban = []
 
-// let penyanyi diklik buka pertanyaan - pertanyaan dari listPertanyaan.penyanyi.pertanyaan
-let uSoal = -1
-let score = 0
-let mulai = true
-let next = document.getElementById("next")
-let point = 0
-let userAnswer = ''
+// ==================================================================
 
+// SETUP
+let pertanyaanKe = 0
+let jawabanUser = []
+let totalScore = 0
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     pertanyaanPertama()
+// })
+let before = []
 
-function start(kategori) {
-    // let question = document.getElementById("question")
-    // for (let i = 0; i < listPertanyaan[kategori].length; i++) {
-    if (uSoal === -1) {
-        next.innerHTML = "Start"
+let mulai = document.getElementById('mulai')
+mulai.addEventListener("click", () => {
+    document.getElementById('opening').style.display = "none"
+    document.getElementById('quiz').style.display = 'block'
+})
+
+function pertanyaan() {
+    let urutan = Number(Math.floor(Math.random() * listPertanyaan.length))
+    for (let i = 0; i < before.length; i++) {
+        const el = before[i];
+        if (urutan === el) {
+            urutan = Number(Math.floor(Math.random() * listPertanyaan.length))
+        }
     }
-    if (uSoal > 0 && uSoal < 2) {
-        next.innerHTML = "Start"
-    }
+    before.push(urutan)
 
+    let question = document.getElementById('question')
 
-    uSoal++
-    const ktg = listPertanyaan[kategori][uSoal];
-    // question.innerHTML = kategori.pertanyaan
-    // ambil option id
-    let question = document.getElementById("question")
-    question.innerText = ktg.pertanyaan
-    if (uSoal === ktg.pertanyaan) {
-        uSoal = 'selesai'
-    }
+    question.innerText = listPertanyaan[urutan].pertanyaan
+    kunciJawaban.push(listPertanyaan[urutan].kunJaw)
+    let op0 = document.getElementById('opText0')
+    let op1 = document.getElementById('opText1')
+    let op2 = document.getElementById('opText2')
+    let op3 = document.getElementById('opText3')
 
-    console.log(question);
-    let op1 = document.getElementById('op1')
-    let op2 = document.getElementById('op2')
-    let op3 = document.getElementById('op3')
-    let op4 = document.getElementById('op4')
-    // kasih option option
-    op1.innerText = ktg.jawaban[0].text
-    op2.innerText = ktg.jawaban[1].text
-    op3.innerText = ktg.jawaban[2].text
-    op4.innerText = ktg.jawaban[3].text
-    // tentuin mana jawaban bener
-    op1.value = ktg.jawaban[0].value
-    op2.value = ktg.jawaban[1].value
-    op3.value = ktg.jawaban[2].value
-    op4.value = ktg.jawaban[3].value
-
-
-    // ketika dipilih 
-    op1.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightgreen";
-        op2.style.backgroundColor = "lightblue";
-        op3.style.backgroundColor = "lightblue";
-        op4.style.backgroundColor = "lightblue";
-        userAnswer = ktg.jawaban[0].value
-    })
-    op2.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightblue";
-        op2.style.backgroundColor = "lightgreen";
-        op3.style.backgroundColor = "lightblue";
-        op4.style.backgroundColor = "lightblue";
-        userAnswer = ktg.jawaban[1].value
-    })
-    op3.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightblue";
-        op2.style.backgroundColor = "lightblue";
-        op3.style.backgroundColor = "lightgreen";
-        op4.style.backgroundColor = "lightblue";
-        userAnswer = ktg.jawaban[2].value
-    })
-    op4.addEventListener("click", () => {
-        op1.style.backgroundColor = "lightblue";
-        op2.style.backgroundColor = "lightblue";
-        op3.style.backgroundColor = "lightblue";
-        op4.style.backgroundColor = "lightgreen";
-        userAnswer = ktg.jawaban[3].value
-    })
-    if (userAnswer === true) {
-        point++
-    }
-    if (uSoal === 1) {
-        mulai = false
-    }
-
-    console.log(point);
-    score = point / ktg.length * 100
+    op0.innerText = listPertanyaan[urutan].jawaban[0]
+    op1.innerText = listPertanyaan[urutan].jawaban[1]
+    op2.innerText = listPertanyaan[urutan].jawaban[2]
+    op3.innerText = listPertanyaan[urutan].jawaban[3]
+    console.log(kunciJawaban);
 }
 
 
-if (mulai) {
-    next.innerHTML = "Next"
-    next.addEventListener("click", () => {
-        start('hewan')
-    })
+let button = document.getElementById('button')
+console.log(pertanyaanKe);
+
+button.addEventListener("click", () => {
+    pertanyaanKe++
+
+    jawaban()
+
+    if (pertanyaanKe === 5) {
+        stopKuis()
+    }
+
+    // resetPilihan()
+    pertanyaan()
+})
+
+// function resetPilihan() {
+//     document.querySelector(`input[name='pilihan']:checked`).checked = false
+// }
+
+function stopKuis() {
+    checkScore()
+    document.getElementById('quiz').style.display = "none"
+    document.getElementById('closing').style.display = "block"
+    let score = document.getElementById('score')
+    if (totalScore === 100) {
+        score.innerHTML = `Wah hebat, sempurna, kamu mendapatkan score: ${totalScore}`
+    } else if (totalScore >= 80 && totalScore <= 99) {
+        score.innerHTML = `GG gaming, kamu mendapatkan score: ${totalScore}`
+    } else if (totalScore >= 60 && totalScore <= 79) {
+        score.innerHTML = `Hmm.. lumayan lah, kamu mendapatkan score: ${totalScore}`
+    } else if (totalScore >= 20 && totalScore <= 59) {
+        score.innerHTML = `yaahhhh, ko bisa sih? Kamu dapat score: ${totalScore}`
+    } else {
+        score.innerHTML = `Lebih baik aku ngga kasih tau score kamu ya :(`
+    }
+    return
 }
-if (!mulai) {
-    next.innerHTML = "Selesai"
-    next.addEventListener("click", () => {
-        // tampilin score
-        alert(score)
-    })
+
+function jawaban() {
+    let jawaban = document.querySelector(`input[name='pilihan']:checked`)
+
+    if (jawaban != null) {
+        jawabanUser.push(parseInt(jawaban.getAttribute('data-id')))
+        console.log(jawabanUser);
+    } else {
+        jawabanUser.push(undefined)
+    }
 }
 
-// next.addEventListener("click", () => {
-//     start(kategori)
-//     uSoal++
-// })
 
+function checkScore() {
+    for (let i = 0; i < jawabanUser.length; i++) {
 
-
-
-
-
-// let penyanyi = document.getElementById('penyanyi')
-// penyanyi.addEventListener("click", () => {
-//     start("penyanyi")
-// })
-
-// let hewan = document.getElementById('hewan')
-// hewan.addEventListener("click", () => {
-//     start("hewan")
-// })
-
-// let buah = document.getElementById('buah')
-// buah.addEventListener("click", () => {
-//     start("buah")
-// })
-
-
+        if (jawabanUser[i] === kunciJawaban[i]) {
+            totalScore += 20
+        }
+    }
+}
+pertanyaan()
