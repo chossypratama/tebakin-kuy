@@ -30,23 +30,34 @@
 
         <div id="quiz" style="display:none">
             <h1 id="question"></h1>
-            <input type="radio" name="pilihan" data-id="0" id="op0">
-            <label for="op0" id="opText0"></label>
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="0" id="op0" class="pilihan">
+                <label for="op0" id="opText0"></label>
+            </div>
 
-            <input type="radio" name="pilihan" data-id="1" id="op1">
-            <label for="op1" id="opText1"></label>
-
-            <input type="radio" name="pilihan" data-id="2" id="op2">
-            <label for="op2" id="opText2"></label>
-
-            <input type="radio" name="pilihan" data-id="3" id="op3">
-            <label for="op3" id="opText3"></label>
-
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="1" id="op1" class="pilihan">
+                <label for="op1" id="opText1"></label>
+            </div>
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="2" id="op2" class="pilihan">
+                <label for="op2" id="opText2"></label>
+            </div>
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="3" id="op3" class="pilihan">
+                <label for="op3" id="opText3"></label>
+            </div>
+            <br>
+            <br>
             <button id="button">Next</button>
         </div>
         <div id="closing" style="display:none">
             <h1>Selesai!</h1>
             <h2 id="score"></h2>
+            <br>
+            <br>
+            <br>
+            <button id="kembali">Kembali ke menu</button>
         </div>
     </section>
     <section id="daftar" style="display:none">
