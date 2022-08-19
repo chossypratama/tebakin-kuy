@@ -14,6 +14,7 @@
     text-decoration: none;
     outline: none; border: none;
     text-transform: capitalize;
+    font-size: 18px;
 }
 
 *::selection {
@@ -111,7 +112,7 @@ li {
 
 /* Tambah/Update Pertanyaan */
 
-#tambah {
+#tambah, #update {
     left: 0;
     right: 0;
     width: 50vw;
