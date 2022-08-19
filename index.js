@@ -209,7 +209,7 @@ function renderDaftar(show) {
       // div pertanyaan
       const newListQ = document.createElement("div");
       const newListQTxt = document.createElement("div");
-      newListQTxt.innerText = `${list[i].pertanyaan}`;
+      newListQTxt.innerText = `Pertanyaan : ${list[i].pertanyaan}`;
       newListQ.append(newListQTxt);
       newListQ.classList.add("list-question-text");
       // btn disamping question
@@ -231,6 +231,9 @@ function renderDaftar(show) {
       // div jawaban
       const newListA = document.createElement("ul");
       newListA.classList.add("list-question-answers");
+      const newListATitle = document.createElement('div')
+      newListATitle.innerHTML = "Jawaban :"
+      newListA.appendChild(newListATitle)
       for (let j = 0; j < list[i].jawaban.length; j++) {
         const jawaban = list[i].jawaban[j];
         const kunJaw = list[i].kunJaw;
@@ -318,6 +321,9 @@ function renderUpdate(index) {
   }
 
   radio[listPertanyaan[index].kunJaw].checked = true;
+
+  let scroll = document.getElementById("update");
+  scroll.scrollIntoView({behavior: 'smooth'}, true);
 }
 
 function updateList() {
