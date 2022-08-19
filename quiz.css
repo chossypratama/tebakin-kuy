@@ -28,7 +28,9 @@ html {
 }
 
 body {
-    background-color: blanchedalmond;
+    padding: 10px;
+    background-image: url(https://img.freepik.com/free-vector/cute-boy-holding-indonesian-flag-cartoon-vector-icon-illustration-people-holiday-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3820.jpg?size=338&ext=jpg&ga=GA1.2.1312521421.1653816299);
+    background-size: 70%;
 }
 
 header {
@@ -66,15 +68,40 @@ header .navbar a #special {
 }
 
 section {
-    width: 70vw;
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
+    font-size: 40px;
+    color: #0d150c;
+    font-style: italic;
+}
+.button-menu{
+    background-color: #1f1b1b;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30%;
+}
+
+.button-menu:hover {
+    background-color: #dc3246;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30%;
 }
 
 section h1{
     text-align: center;
     font-size: 50px;
+    
 }
 
 li {
