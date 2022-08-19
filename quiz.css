@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
 
 :root {
-    --green: #4E9F3D;
-    --blue: #8FD6E1;
-    --gradient: linear-gradient(90deg, var(--green),var(--blue))
+
+  --red: #dc3246;
+  --green: #4e9f3d;
+  --blue: #8fd6e1;
+  --gradient: linear-gradient(90deg, var(--green), var(--blue));
 }
 
-
 * {
-    font-family: 'poppins', sans-serif;
-    margin: 0; padding: 0;
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    outline: none; border: none;
+    outline: none;
+    border: none;
     text-transform: capitalize;
+    font-size: 18px;
 }
 
 *::selection {
@@ -27,14 +31,17 @@ html {
 }
 
 body {
-    background-color: blanchedalmond;
+  padding: 10px;
+  background-image: url(https://img.freepik.com/free-vector/cute-boy-holding-indonesian-flag-cartoon-vector-icon-illustration-people-holiday-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3820.jpg?size=338&ext=jpg&ga=GA1.2.1312521421.1653816299);
+  background-size: 50%;
 }
 
 header {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -65,13 +72,46 @@ header .navbar a #special {
 }
 
 section {
-    width: 70vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
+    font-size: 40px;
+    color: #0d150c;
+    font-style: italic;
 }
 
-section h1{
+#menu {
+    padding-top: 15vh;
+}
+
+#menu .button-menu {
+    margin: 30px auto;
+}
+
+.button-menu {
+    background-color: #1f1b1b;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30%;
+    text-align: center;
+}
+
+.button-menu:hover {
+    background-color: var(--red);
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30%;
+}
+
+section h1 {
     text-align: center;
     font-size: 50px;
 }
@@ -82,6 +122,26 @@ li {
 
 /* Daftar Pertanyaan */
 
+.daftar-title {
+    background-color: rgba(220, 50, 70, 0.9);
+    color: #fff;
+    border: 2px black solid;
+    margin: 20px;
+    padding: 20px;
+}
+
+#menu,
+#daftar {
+    width: 80vw;
+}
+
+.list-question-item {
+    padding: 10px;
+    margin: 10px;
+    border: 2px black solid;
+    background-color: rgba(143, 214, 225, 0.9);
+}
+
 .list-question-text {
     display: flex;
 }
@@ -90,30 +150,171 @@ li {
     flex: 1 1 auto;
 }
 
+#question {
+    color: black;
+    margin-bottom: 40px;
+
+}
+
+#quiz {
+    text-align: center;
+    flex: auto;
+    display: block;
+    margin-top: 300px;
+    margin: 300px auto 0 auto;
+    background-color: rgba(143, 214, 225, 0.9);
+    width: 80vw;
+    padding: 20px 0;
+}
+
+.opsi {
+    margin: 100px 20px;
+    display: inline;
+}
+
+.opsi label {
+    font-size: 30px;
+    border: black 1px solid;
+    background-color: white;
+    padding: 15px 20px;
+}
+
+.opsi label:hover {
+    border: black 1px solid;
+    background-color: lightgreen;
+    font-size: 40px;
+    border-radius: 10%;
+}
+
+input[type="radio"]:checked+label {
+    border: black 1px solid;
+    background-color: lightgreen;
+    font-size: 40px;
+    border-radius: 10%;
+}
+
+#closing {
+    text-align: center;
+    flex: auto;
+    display: block;
+    margin-top: 300px;
+    margin: 300px auto 0 auto;
+    background-color: rgba(143, 214, 225, 0.9);
+    width: 80vw;
+}
+
+#closing h1 {
+    font-size: 50px;
+}
+
+#closing h2 {
+    font-size: 30px;
+}
+
+#button {
+    width: 70px;
+    height: 50px;
+    background-color: white;
+    border: black 1px solid;
+}
+
+#kembali {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: black 1px solid;
+    border-radius: 40%;
+}
+
+#button:hover {
+    width: 90px;
+    height: 70px;
+    border-style: solid;
+    color: white;
+    border: black 3px solid;
+    background-color: darkblue;
+}
+
+#opening {
+    text-align: center;
+    flex: auto;
+    display: block;
+    margin: 300px auto 0 auto;
+    background-color: rgba(143, 214, 225, 0.9);
+    width: 80vw;
+    padding: 20px 20px;
+}
+
+#mulai {
+    width: 100px;
+    height: 50px;
+    border-style: solid;
+    border-color: black;
+}
+
+#mulai:hover {
+    background-color: darkblue;
+    width: 130px;
+    height: 70px;
+    color: white;
+}
+
 .tambah-btn,
 .update-btn,
 .delete-btn {
-  color: white;
-  border: none;
-  padding: 0.8rem;
-  cursor: pointer;
-  border-radius: 0.4rem;
-  margin-left: 0.4rem;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    margin-left: 0.4rem;
 }
 
 .update-btn {
-  background: #2090ec;
+    background: #2090ec;
 }
 
 .delete-btn {
-  background: #dc3246;
+    background: #dc3246;
 }
 
 /* Tambah/Update Pertanyaan */
 
-#tambah {
+#tambah,
+#update {
     left: 0;
     right: 0;
-    width: 50vw;
-    margin: 30px auto;
+    width: 40vw;
+    margin: 20px auto;
+    background: var(--blue);
+    border: 2px black solid;
+    padding: 20px;
+}
+
+.submit-btn {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid white;
+    background: white;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.submit-btn:after {
+    position: absolute;
+    transition: 0.3s;
+    content: "";
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: var(--red);
+}
+
+.submit-btn:hover::after {
+    width: 100%;
+    left: 0;
 }

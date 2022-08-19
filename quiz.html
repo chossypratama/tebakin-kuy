@@ -7,69 +7,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="index.js">
 </head>
 
 <body>
     <header>
-        <a href="#" class="logo"><span>Best</span><i>App</i></a>
+        <a href="index.html" class="logo"><span><i>Tebakin</i></span><i>Cuy</i></a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fas fa-bars"></label>
         <nav class="navbar">
-            <a href="index.html">home</a>
-            <a href="quiz.html"><i id="special">quiz</i></a>
-            <a href="bantuan.html">bantuan</a>
+            <a href="index.html"><i>home</i></a>
+            <a href="bantuan.html"><i>bantuan</i></a>
         </nav>
     </header>
     <section id="menu">
         <div class="button-menu" onclick="renderQuiz()">Mainkan Quiz</div>
         <div class="button-menu" onclick="renderDaftar('show')">Daftar Pertanyaan</div>
     </section>
-    <section id="quiz" style="display:none">
-        <div>Quiz</div>
+    <section id="quizDisplay" style="display:none">
+        <div id="opening">
+            <h1>Ayo jawab pertanyaannya!</h1>
+            <button id="mulai">Mulai</button>
+        </div>
+
+        <div id="quiz" style="display:none">
+            <h1 id="question"></h1>
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="0" id="op0" class="pilihan">
+                <label for="op0" id="opText0"></label>
+            </div>
+
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="1" id="op1" class="pilihan">
+                <label for="op1" id="opText1"></label>
+            </div>
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="2" id="op2" class="pilihan">
+                <label for="op2" id="opText2"></label>
+            </div>
+            <div class="opsi">
+                <input type="radio" name="pilihan" data-id="3" id="op3" class="pilihan">
+                <label for="op3" id="opText3"></label>
+            </div>
+            <br>
+            <br>
+            <button id="button">Next</button>
+        </div>
+        <div id="closing" style="display:none">
+            <h1>Selesai!</h1>
+            <h2 id="score"></h2>
+            <br>
+            <br>
+            <br>
+            <button id="kembali">Kembali ke menu</button>
+        </div>
     </section>
     <section id="daftar" style="display:none">
         <div>
-            <div onclick="renderMenu()">Kembali Ke Menu</div>
-            <h1>Daftar Pertanyaan</h1>
-            <div onclick="renderTambah()">Tambahkan Pertanyaan</div>
+            <div class="button-menu" onclick="renderMenu()">Kembali Ke Menu</div>
+            <h1 class="daftar-title">Daftar Pertanyaan</h1>
+            <div class="button-menu" onclick="renderTambah()">Tambahkan Pertanyaan</div>
             <div id="tambah" style="display:none">
-                <!-- <form> -->
-                    <label for="questionForm">Pertanyaan</label><br>
-                    <textarea id="questionForm" name="questionForm"></textarea><br>
-                    <label for="answerForm1">Jawaban 1</label><br>
-                    <input type="text" id="answerForm1" name="answerForm"><br><br>
-                    <label for="answerForm2">Jawaban 2</label><br>
-                    <input type="text" id="answerForm2" name="answerForm"><br><br>
-                    <label for="answerForm3">Jawaban 3</label><br>
-                    <input type="text" id="answerForm3" name="answerForm"><br><br>
-                    <label for="answerForm4">Jawaban 4</label><br>
-                    <input type="text" id="answerForm4" name="answerForm"><br><br>
-                    <p>Pilihan Jawaban Yang Tepat</p>
-                    <div>
-                        <input type="radio" name="answerRadio" value="0" id="answerRadio1" checked>
-                        <label for="answerRadio1">Jawaban 1</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="answerRadio" value="1" id="answerRadio2">
-                        <label for="answerRadio2">Jawaban 2</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="answerRadio" value="2" id="answerRadio3">
-                        <label for="answerRadio3">Jawaban 3</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="answerRadio" value="3" id="answerRadio4">
-                        <label for="answerRadio4">Jawaban 4</label>
-                    </div>
-                    <button onclick="tambahList()">Simpan</button>
-                <!-- </form> -->
+                <label for="questionForm">Pertanyaan</label><br>
+                <textarea id="questionForm" name="questionForm"></textarea><br>
+                <label for="answerForm1">Jawaban 1</label><br>
+                <input type="text" id="answerForm1" name="answerForm"><br><br>
+                <label for="answerForm2">Jawaban 2</label><br>
+                <input type="text" id="answerForm2" name="answerForm"><br><br>
+                <label for="answerForm3">Jawaban 3</label><br>
+                <input type="text" id="answerForm3" name="answerForm"><br><br>
+                <label for="answerForm4">Jawaban 4</label><br>
+                <input type="text" id="answerForm4" name="answerForm"><br><br>
+                <p>Pilihan Jawaban Yang Tepat</p>
+                <div>
+                    <input type="radio" name="answerRadio" value="0" id="answerRadio1" checked>
+                    <label for="answerRadio1">Jawaban 1</label>
+                </div>
+                <div>
+                    <input type="radio" name="answerRadio" value="1" id="answerRadio2">
+                    <label for="answerRadio2">Jawaban 2</label>
+                </div>
+                <div>
+                    <input type="radio" name="answerRadio" value="2" id="answerRadio3">
+                    <label for="answerRadio3">Jawaban 3</label>
+                </div>
+                <div>
+                    <input type="radio" name="answerRadio" value="3" id="answerRadio4">
+                    <label for="answerRadio4">Jawaban 4</label>
+                </div>
+                <div class="submit-btn" onclick="tambahList()">Simpan</div>
             </div>
+            <section id="update" style="display:none">
+                <label for="questionFormU">Pertanyaan</label><br>
+                <textarea id="questionFormU" name="questionFormU"></textarea><br>
+                <label for="answerForm1U">Jawaban 1</label>
+                <input type="text" id="answerForm1U" name="answerFormU"><br>
+                <label for="answerForm2U">Jawaban 2</label>
+                <input type="text" id="answerForm2U" name="answerFormU"><br>
+                <label for="answerForm3U">Jawaban 3</label>
+                <input type="text" id="answerForm3U" name="answerFormU"><br>
+                <label for="answerForm4U">Jawaban 4</label>
+                <input type="text" id="answerForm4U" name="answerFormU"><br>
+                <p>Pilihan Jawaban Yang Tepat</p>
+                <div>
+                    <input type="radio" name="answerRadioU" value="0" id="answerRadio1U" checked>
+                    <label for="answerRadio1U">Jawaban 1</label>
+                </div>
+                <div>
+                    <input type="radio" name="answerRadioU" value="1" id="answerRadio2U">
+                    <label for="answerRadio2U">Jawaban 2</label>
+                </div>
+                <div>
+                    <input type="radio" name="answerRadioU" value="2" id="answerRadio3U">
+                    <label for="answerRadio3U">Jawaban 3</label>
+                </div>
+                <div>
+                    <input type="radio" name="answerRadioU" value="3" id="answerRadio4U">
+                    <label for="answerRadio4U">Jawaban 4</label>
+                </div>
+                <div class="submit-btn" onclick="updateList()">Simpan</div>
+            </section>
             <ul class="list-question">
-
             </ul>
-        </div>
-    </section>
-    <section id="update" style="display:none">
-        <div>
-
         </div>
     </section>
     <script src="index.js"></script>
