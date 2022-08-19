@@ -1,121 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
 
 :root {
-    --green: #4E9F3D;
-    --blue: #8FD6E1;
-    --gradient: linear-gradient(90deg, var(--green),var(--blue))
+  --red: #dc3246;
+  --green: #4e9f3d;
+  --blue: #8fd6e1;
+  --gradient: linear-gradient(90deg, var(--green), var(--blue));
 }
 
-
 * {
-    font-family: 'poppins', sans-serif;
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none; border: none;
-    text-transform: capitalize;
-    font-size: 18px;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  font-size: 18px;
 }
 
 *::selection {
-    background: var(--blue);
-    color: #fff;
+  background: var(--blue);
+  color: #fff;
 }
 
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
-    padding: 10px;
-    background-image: url(https://img.freepik.com/free-vector/cute-boy-holding-indonesian-flag-cartoon-vector-icon-illustration-people-holiday-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3820.jpg?size=338&ext=jpg&ga=GA1.2.1312521421.1653816299);
-    background-size: 50%;
+  padding: 10px;
+  background-image: url(https://img.freepik.com/free-vector/cute-boy-holding-indonesian-flag-cartoon-vector-icon-illustration-people-holiday-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3820.jpg?size=338&ext=jpg&ga=GA1.2.1312521421.1653816299);
+  background-size: 50%;
 }
 
 header {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
-    padding: 2rem 9%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    background-color: #151515;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: #151515;
 }
 
 header .logo {
-    font-size: 2rem;
-    color: var(--green);
+  font-size: 2rem;
+  color: var(--green);
 }
 
 header .logo span {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 header .navbar a {
-    font-size: 1.7rem;
-    margin-left: 2rem;
-    color: var(--green);
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  color: var(--green);
 }
 
 header .navbar a #special {
-    font-size: 1.7rem;
-    margin-left: 0.1rem;
-    color: var(--blue);
+  font-size: 1.7rem;
+  margin-left: 0.1rem;
+  color: var(--blue);
 }
 
 section {
-    width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10vh;
-    font-size: 40px;
-    color: #0d150c;
-    font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  font-size: 40px;
+  color: #0d150c;
+  font-style: italic;
 }
-.button-menu{
-    background-color: #1f1b1b;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 10px 15px 10px 15px;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    width: 30%;
+
+#menu {
+    padding-top: 15vh;
+}
+
+#menu .button-menu {
+    margin: 30px auto;
+}
+
+.button-menu {
+  background-color: #1f1b1b;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px 15px 10px 15px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  width: 30%;
+  text-align: center;
 }
 
 .button-menu:hover {
-    background-color: #dc3246;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 10px 15px 10px 15px;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    width: 30%;
+  background-color: var(--red);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px 15px 10px 15px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  width: 30%;
 }
 
-section h1{
-    text-align: center;
-    font-size: 50px;
-    
+section h1 {
+  text-align: center;
+  font-size: 50px;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 /* Daftar Pertanyaan */
 
+.daftar-title {
+    background-color: rgba(220, 50, 70, 0.9);
+    color: #fff;
+    border: 2px black solid;
+    margin: 20px;
+    padding: 20px;
+}
+
+#menu,
+#daftar {
+  width: 80vw;
+}
+
+.list-question-item {
+  padding: 10px;
+  margin: 10px;
+  border: 2px black solid;
+  background-color: rgba(143, 214, 225, 0.9);
+}
+
 .list-question-text {
-    display: flex;
+  display: flex;
 }
 
 .list-question-text div {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .tambah-btn,
@@ -139,9 +170,39 @@ li {
 
 /* Tambah/Update Pertanyaan */
 
-#tambah, #update {
-    left: 0;
-    right: 0;
-    width: 50vw;
-    margin: 30px auto;
+#tambah,
+#update {
+  left: 0;
+  right: 0;
+  width: 40vw;
+  margin: 20px auto;
+  background: var(--blue);
+  border: 2px black solid;
+  padding: 20px;
+}
+
+.submit-btn {
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid white;
+  background: white;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.submit-btn:after {
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: var(--red);
+}
+.submit-btn:hover::after {
+  width: 100%;
+  left: 0;
 }

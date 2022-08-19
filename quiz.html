@@ -51,9 +51,9 @@
     </section>
     <section id="daftar" style="display:none">
         <div>
-            <div onclick="renderMenu()">Kembali Ke Menu</div>
-            <h1>Daftar Pertanyaan</h1>
-            <div onclick="renderTambah()">Tambahkan Pertanyaan</div>
+            <div class="button-menu" onclick="renderMenu()">Kembali Ke Menu</div>
+            <h1 class="daftar-title">Daftar Pertanyaan</h1>
+            <div class="button-menu" onclick="renderTambah()">Tambahkan Pertanyaan</div>
             <div id="tambah" style="display:none">
                 <label for="questionForm">Pertanyaan</label><br>
                 <textarea id="questionForm" name="questionForm"></textarea><br>
@@ -82,19 +82,19 @@
                     <input type="radio" name="answerRadio" value="3" id="answerRadio4">
                     <label for="answerRadio4">Jawaban 4</label>
                 </div>
-                <button onclick="tambahList()">Simpan</button>
+                <div class="submit-btn" onclick="tambahList()">Simpan</div>
             </div>
             <section id="update" style="display:none">
                 <label for="questionFormU">Pertanyaan</label><br>
                 <textarea id="questionFormU" name="questionFormU"></textarea><br>
-                <label for="answerForm1U">Jawaban 1</label><br>
-                <input type="text" id="answerForm1U" name="answerFormU"><br><br>
-                <label for="answerForm2U">Jawaban 2</label><br>
-                <input type="text" id="answerForm2U" name="answerFormU"><br><br>
-                <label for="answerForm3U">Jawaban 3</label><br>
-                <input type="text" id="answerForm3U" name="answerFormU"><br><br>
-                <label for="answerForm4U">Jawaban 4</label><br>
-                <input type="text" id="answerForm4U" name="answerFormU"><br><br>
+                <label for="answerForm1U">Jawaban 1</label>
+                <input type="text" id="answerForm1U" name="answerFormU"><br>
+                <label for="answerForm2U">Jawaban 2</label>
+                <input type="text" id="answerForm2U" name="answerFormU"><br>
+                <label for="answerForm3U">Jawaban 3</label>
+                <input type="text" id="answerForm3U" name="answerFormU"><br>
+                <label for="answerForm4U">Jawaban 4</label>
+                <input type="text" id="answerForm4U" name="answerFormU"><br>
                 <p>Pilihan Jawaban Yang Tepat</p>
                 <div>
                     <input type="radio" name="answerRadioU" value="0" id="answerRadio1U" checked>
@@ -112,7 +112,7 @@
                     <input type="radio" name="answerRadioU" value="3" id="answerRadio4U">
                     <label for="answerRadio4U">Jawaban 4</label>
                 </div>
-                <button onclick="updateList()">Simpan</button>
+                <div class="submit-btn" onclick="updateList()">Simpan</div> 
             </section>
             <ul class="list-question">
 
