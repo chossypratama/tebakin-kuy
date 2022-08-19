@@ -136,8 +136,6 @@ function stopKuis() {
   let score = document.getElementById("score");
   if (totalScore === 100) {
     score.innerHTML = `Wah hebat, sempurna, kamu mendapatkan score: ${totalScore}`;
-    let lagu = document.getElementById("music")
-    lagu.style = "autoplay"
   } else if (totalScore >= 80 && totalScore <= 99) {
     score.innerHTML = `GG gaming, kamu mendapatkan score: ${totalScore}`;
   } else if (totalScore >= 60 && totalScore <= 79) {
