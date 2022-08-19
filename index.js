@@ -69,10 +69,11 @@ let reset;
 let before = [];
 let mulai = document.getElementById("mulai");
 mulai.addEventListener("click", () => {
-  console.log("halo");
+  pertanyaan();
   document.getElementById("opening").style.display = "none";
   document.querySelector("#quiz").style.display = "block";
 });
+
 
 function pertanyaan() {
   let urutan = Number(Math.floor(Math.random() * listPertanyaan.length));
@@ -87,6 +88,7 @@ function pertanyaan() {
   let question = document.getElementById("question");
   question.innerText = listPertanyaan[urutan].pertanyaan;
   kunciJawaban.push(listPertanyaan[urutan].kunJaw);
+
   let op0 = document.getElementById("opText0");
   let op1 = document.getElementById("opText1");
   let op2 = document.getElementById("opText2");
@@ -103,18 +105,16 @@ function pertanyaan() {
 }
 
 let button = document.getElementById("button");
-console.log(pertanyaanKe);
+
 
 button.addEventListener("click", () => {
   pertanyaanKe++;
-
   jawaban();
-
   if (pertanyaanKe === 5) {
     stopKuis();
+  } else if (pertanyaanKe < 5) {
+    pertanyaan();
   }
-
-  pertanyaan();
 });
 
 let kembali = document.getElementById('kembali')
@@ -166,7 +166,7 @@ function checkScore() {
     }
   }
 }
-pertanyaan();
+
 
 function renderMenu() {
   menu.style.display = "block";
@@ -305,7 +305,7 @@ function renderUpdate(index) {
   tambah.style.display = "none";
   update.style.display = "block";
 
-  console.log(listPertanyaan[index]);
+  // console.log(listPertanyaan[index]);
 
   const question = document.querySelector("#questionFormU");
   const answers = document.getElementsByName("answerFormU");
