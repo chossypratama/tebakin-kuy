@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
 
 :root {
-
   --red: #dc3246;
   --green: #4e9f3d;
   --blue: #8fd6e1;
@@ -31,6 +30,7 @@ html {
 }
 
 body {
+
   padding: 10px;
   background-image: url(https://img.freepik.com/free-vector/cute-boy-holding-indonesian-flag-cartoon-vector-icon-illustration-people-holiday-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3820.jpg?size=338&ext=jpg&ga=GA1.2.1312521421.1653816299);
   background-size: 50%;
