@@ -62,11 +62,11 @@ let currentUpdatedKey = undefined
 let pertanyaanKe = 0;
 let jawabanUser = [];
 let totalScore = 0;
+let reset;
 // document.addEventListener("DOMContentLoaded", function (event) {
 //     pertanyaanPertama()
 // })
 let before = [];
-
 let mulai = document.getElementById("mulai");
 mulai.addEventListener("click", () => {
   console.log("halo");
@@ -85,13 +85,15 @@ function pertanyaan() {
   before.push(urutan);
 
   let question = document.getElementById("question");
-
   question.innerText = listPertanyaan[urutan].pertanyaan;
   kunciJawaban.push(listPertanyaan[urutan].kunJaw);
   let op0 = document.getElementById("opText0");
   let op1 = document.getElementById("opText1");
   let op2 = document.getElementById("opText2");
   let op3 = document.getElementById("opText3");
+  // reset = op0
+
+
 
   op0.innerText = listPertanyaan[urutan].jawaban[0];
   op1.innerText = listPertanyaan[urutan].jawaban[1];
@@ -112,13 +114,20 @@ button.addEventListener("click", () => {
     stopKuis();
   }
 
-  // resetPilihan()
   pertanyaan();
 });
 
-// function resetPilihan() {
-//     document.querySelector(`input[name='pilihan']:checked`).checked = false
-// }
+let kembali = document.getElementById('kembali')
+kembali.addEventListener("click", () => {
+  pertanyaanKe = 0;
+  jawabanUser = [];
+  before = [];
+  kunciJawaban = [];
+  document.getElementById("opening").style.display = "block";
+  document.querySelector("#quiz").style.display = "none";
+  document.querySelector("#closing").style.display = "none";
+  renderMenu()
+});
 
 function stopKuis() {
   checkScore();

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
 
 :root {
+
   --red: #dc3246;
   --green: #4e9f3d;
   --blue: #8fd6e1;
@@ -149,23 +150,119 @@ li {
   flex: 1 1 auto;
 }
 
+#question {
+    color: black;
+    margin-bottom: 40px;
+
+}
+
+#quiz {
+    text-align: center;
+    flex: auto;
+    display: block;
+    margin-top: 300px;
+}
+
+.opsi {
+    margin: 100px 20px;
+    display: inline;
+}
+
+.opsi label {
+    font-size: 30px;
+}
+
+.opsi label:hover {
+    border: black 1px solid;
+    background-color: red;
+    font-size: 40px;
+    border-radius: 10%;
+}
+
+input[type="radio"]:checked+label {
+    border: black 1px solid;
+    background-color: red;
+    font-size: 40px;
+    border-radius: 10%;
+}
+
+#closing {
+    text-align: center;
+    flex: auto;
+    display: block;
+    margin-top: 300px;
+}
+
+#closing h1 {
+    font-size: 50px;
+}
+
+#closing h2 {
+    font-size: 30px;
+}
+
+#button {
+    width: 70px;
+    height: 50px;
+    background-color: white;
+    border: black 1px solid;
+}
+
+#kembali {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: black 1px solid;
+    border-radius: 40%;
+}
+
+#button:hover {
+    width: 90px;
+    height: 70px;
+    border-style: solid;
+    color: white;
+    border: black 3px solid;
+    background-color: darkblue;
+}
+
+#opening {
+    text-align: center;
+    flex: auto;
+    display: block;
+    margin-top: 300px;
+}
+
+#mulai {
+    width: 100px;
+    height: 50px;
+    border-style: solid;
+    border-color: black;
+}
+
+#mulai:hover {
+    background-color: darkblue;
+    width: 130px;
+    height: 70px;
+    color: white;
+}
+
 .tambah-btn,
 .update-btn,
 .delete-btn {
-  color: white;
-  border: none;
-  padding: 0.8rem;
-  cursor: pointer;
-  border-radius: 0.4rem;
-  margin-left: 0.4rem;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    margin-left: 0.4rem;
 }
 
 .update-btn {
-  background: #2090ec;
+    background: #2090ec;
 }
 
 .delete-btn {
-  background: #dc3246;
+    background: #dc3246;
 }
 
 /* Tambah/Update Pertanyaan */
